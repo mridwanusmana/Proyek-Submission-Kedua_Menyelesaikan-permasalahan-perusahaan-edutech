@@ -7,7 +7,7 @@ model = joblib.load('model.pkl')
 image = 'BANNER.png'
 
 def display_sidebar():
-    st.sidebar.subheader("Masukkan Data Siswa")
+    st.sidebar.subheader("Masukkan Data Mahasiswa")
 
     marital_status = st.sidebar.selectbox("Status Pernikahan", ["Single", "Married", "Divorced"], key='marital_status')
     application_mode = st.sidebar.selectbox("Mode Pendaftaran", [
@@ -188,7 +188,7 @@ def main():
 
     st.markdown("***")
     st.markdown(
-        "<div style='text-align: center; color: #666; margin-top: 30px;'>Copyright © 2025 | mridwanusmana@gmail.com</div>",
+        "<div style='text-align: center; color: #666; margin-top: 30px;'>Copyright © 2025 | mridwanusmana15@gmail.com</div>",
         unsafe_allow_html=True
     )
 
