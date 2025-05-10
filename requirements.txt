@@ -29,4 +29,8 @@ tornado==6.4.2
 typing-extensions==4.12.2
 urllib3==2.3.6
 watchdog==6.0.0
+markdown-it-py==3.0.0
+mdurl==0.1.2
+pygments==2.19.1
+rich==14.0.0
 
