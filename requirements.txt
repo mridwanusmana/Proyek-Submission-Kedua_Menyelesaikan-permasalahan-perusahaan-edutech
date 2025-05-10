@@ -1,3 +1,7 @@
+joblib==1.4.0
+matplotlib==3.7.1 
+seaborn==0.13.1 
+xgboost==2.0.3 
 altair==5.5.0
 anyio==4.6.0
 argon2-cffi==23.1.0
