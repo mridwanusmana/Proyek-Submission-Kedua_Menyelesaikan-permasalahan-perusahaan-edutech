@@ -16,7 +16,7 @@ gitdb==4.0.12
 gitpython==3.1.44
 idna==3.10
 jinja2==3.1.5
-jsonschoma==4.23.0
+jsonschema==4.23.0
 jsonschema-specifications==2024.10.1
 markupsafe==3.0.2
 narwhals==1.27.1
