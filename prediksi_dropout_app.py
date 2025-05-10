@@ -7,7 +7,7 @@ model = joblib.load('model.pkl')
 image = 'BANNER.png'
 
 def display_sidebar():
-    st.sidebar.subheader("Masukkan Data Mahasiswa")
+    st.sidebar.subheader("Masukkan Data Siswa")
 
     marital_status = st.sidebar.selectbox("Status Pernikahan", ["Single", "Married", "Divorced"], key='marital_status')
     application_mode = st.sidebar.selectbox("Mode Pendaftaran", [
