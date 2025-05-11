@@ -114,14 +114,14 @@ def display_sidebar():
         "Other"
     ], key='fathers_occupation')
     admission_grade = st.sidebar.slider("Nilai Penerimaan", min_value=0, max_value=200, step=1, key='admission_grade')
-    displaced = st.sidebar.selectbox("Apakah siswa tersebut adalah orang yang terlantar", ["Yes", "No"], key='displaced')
+    displaced = st.sidebar.selectbox("Apakah Mahasiswa tersebut adalah orang yang terlantar", ["Yes", "No"], key='displaced')
     educational_special_needs = st.sidebar.selectbox("Kebutuhan Pendidikan Khusus", ["Yes", "No"], key='educational_special_needs')
     debtor = st.sidebar.selectbox("Debitor", ["Yes", "No"], key='debtor')
     tuition_fees_up_to_date = st.sidebar.selectbox("Biaya Kuliah Terbayar", ["Yes", "No"], key='tuition_fees_up_to_date')
     gender = st.sidebar.selectbox("Jenis Kelamin", ["Male", "Female"], key='gender')
     scholarship_holder = st.sidebar.selectbox("Penerima Beasiswa", ["Yes", "No"], key='scholarship_holder')
     age_at_enrollment = st.sidebar.number_input("Usia Saat Pendaftaran", key='age_at_enrollment', format='%f')
-    international = st.sidebar.selectbox("Apakah siswa tersebut adalah siswa internasional", ["Yes", "No"], key='international')
+    international = st.sidebar.selectbox("Apakah Mahasiswa tersebut adalah Mahasiswa internasional", ["Yes", "No"], key='international')
     curricular_units_1st_sem_credited = st.sidebar.number_input("Curricular units 1st sem (credited)", min_value=0, key='curricular_units_1st_sem_credited')
     curricular_units_1st_sem_enrolled = st.sidebar.number_input("Curricular units 1st sem (enrolled)", min_value=0, key='curricular_units_1st_sem_enrolled')
     curricular_units_1st_sem_evaluations = st.sidebar.number_input("Curricular units 1st sem (evaluations)", min_value=0, key='curricular_units_1st_sem_evaluations')
@@ -172,7 +172,7 @@ def main():
 
     if st.sidebar.button("Prediksi"):
         if input_data.isnull().values.any():
-            st.error("Harap isi semua data siswa terlebih dahulu.")
+            st.error("Harap isi semua data Mahasiswa terlebih dahulu.")
         else:
             prediction_proba = predict_status_proba(model, input_data)
             dropout_prob = prediction_proba[0][1]
@@ -181,10 +181,10 @@ def main():
             st.subheader("Prediksi Status Dropout:")
             if dropout_prob > 0.5:
                 st.error(f"Probabilitas Dropout: {dropout_prob:.2%}")
-                st.write("Ada kemungkinan besar siswa akan mengalami dropout.")
+                st.write("Ada kemungkinan besar Mahasiswa akan mengalami dropout.")
             else:
                 st.success(f"Probabilitas Tidak Dropout: {not_dropout_prob:.2%}")
-                st.write("Kemungkinan besar siswa tidak dropout.")
+                st.write("Kemungkinan besar Mahasiswa tidak dropout.")
 
     st.markdown("***")
     st.markdown(
